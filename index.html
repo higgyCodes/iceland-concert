@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="main.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.js"></script>
+
+</head>
+<body ng-app="app">
+	<div ng-controller="MainCtrl">
+	<ul class="nav nav-pills">
+  		<li role="presentation" class="active"><a href="#">Home</a></li>
+  		<li role="presentation"><a href="#">Profile</a></li>
+  		<li role="presentation"><a href="#">Messages</a></li>
+
+	</ul>
+
+	<div class='well' style="backround: #C0C0C0" ng-repeat="concert in concerts.data.results">
+		<ul class="list-group">
+		<li class="list-group-item"
+		style="background: #EBF7EB">
+
+		<!-- Now pulling the data through -->
+		<div class="concert">{{concert.eventDateName}}</div>
+		<div>{{concert.dateOfShow}}</div>
+		<div>{{concert.eventHallName}}</div>
+		<div class=title>{{concert.name}}</div>
+		<div>{{concert.userGroupName}}</div>
+		<img class=image src="{{concert.imageSource}}">
+		</li>
+		</ul>
+		</body>
+	</div>
+	
+	
+
+</div>
+
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
